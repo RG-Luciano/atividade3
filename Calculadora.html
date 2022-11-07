@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JS</title>
+</head>
+<body>
+    <script>
+        var num1 = Number(window.prompt("digite um número: "));
+        var operador = (window.prompt("digite a operação que deseja: "));
+        var num2 = Number(window.prompt("digite outro número: "));
+        var sobra;
+        var operacao;
+
+        if(operador == "+"){
+            operacao = num1 + num2
+            window.alert("resultado é: " +operacao);
+        }
+        else if(operador == "-"){
+            operacao= num1 - num2
+            window.alert("resultado é: "+ operacao);
+        }
+        else if(operador == "*"){
+            operacao= num1 * num2
+            window.alert("Resultado é:"+operacao);
+        }
+        else if(operador == "/"){
+            sobra = num1 % num2
+            if(sobra==0){
+                operacao= num1 / num2
+                window.alert("Resultado é: "+num1/num2);
+            }
+            else{
+                window.alert("Resultado é: "+num1/num2+" e a sobra é: "+sobra);
+            }
+        }
+        else{
+            window.alert("operador não existe");
+        }
+    </script>
+    
+</body>
+</html>
